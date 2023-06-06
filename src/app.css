@@ -1,0 +1,21 @@
+body {
+  margin: 40px auto;
+  max-width: 650px;
+  line-height: 1.6;
+  font-size: 18px;
+  font-family: Nanum;
+  color: #444;
+  padding: 0 10px;
+}
+
+/*pixel wizard look*/
+@font-face {
+  font-family: "Nanum";
+  src: url("./assets/NanumGothicCoding-Regular.ttf") format("truetype");
+}
+
+/*pixel wizard look*/
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/RobotoCondensed-Regular.ttf") format("truetype");
+}
