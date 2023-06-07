@@ -1,5 +1,5 @@
 <script>
-    import { GetMessageTranscriptRoute } from './store.js';
+    import { GetMessageTranscriptRoute } from '../lib/routes.js';
     export let messageHash = '';
     let transcript = '';
     let promise = GetMessageTranscript(messageHash);

@@ -1,10 +1,10 @@
 <script>
-  import Message from "./lib/Message.svelte";
+  import AllMessagesPage from "./pages/AllMessagesPage.svelte";
   import MessageHeraldry from "./lib/MessageHeraldry.svelte";
 </script>
 
 <main>
-  <Message/>
+  <AllMessagesPage />
   <!--<MessageHeraldry />-->
 </main>
 

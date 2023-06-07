@@ -1,19 +1,19 @@
 <script>
     import { onMount } from 'svelte';
-    import { GetAllMessageHashRoute } from './store.js';
+    import { GetAllMessageHashesRoute } from './routes.js';
 
-    import MessageDateTime from './MessageDateTime.svelte';
-    import MessageTranscript from './MessageTranscript.svelte';
-    import MessageAudio from './MessageAudio.svelte';
+    import MessageDateTime from '../api-components/MessageDateTime.svelte';
+    import MessageTranscript from '../api-components/MessageTranscript.svelte';
+    import MessageAudio from '../api-components/MessageAudio.svelte';
     import Buttons from './buttons.svelte';
     import Buttonsurgent from './buttonsurgent.svelte';
 
 
     let messages = [];
-    let api = GetAllMessageHashRoute();
+    let api = GetAllMessageHashesRoute();
 
     async function GetMessage (){
-            const response = await fetch(GetAllMessageHashRoute());
+            const response = await fetch(GetAllMessageHashesRoute());
             messages = await response.json();
         }
     
