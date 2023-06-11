@@ -1,10 +1,10 @@
 <script>
     import { onMount } from 'svelte';
     import { GetAllMessageHashesRoute } from '../lib/routes.js';
+
     import MessageDateTime from '../api-components/MessageDateTime.svelte';
     import MessageTranscript from '../api-components/MessageTranscript.svelte';
     import MessageAudio from '../api-components/MessageAudio.svelte';
-
 
     let messages = [];
     let api = GetAllMessageHashesRoute();
@@ -33,17 +33,13 @@
 {#await promise}
     <p>await</p>
 {:then value}
-
     {#each messages as message, i}
         <ul>
             Message {i} | <MessageDateTime messageHash={message.messageHash}/> <br/>
             <MessageTranscript messageHash={message.messageHash}/> <br/>
-            <MessageAudio messageHash={message.messageHash}/>
-            
+            <MessageAudio messageHash={message.messageHash}/>           
         </ul>
-        <hr>
     {/each}
-
 {:catch error}
     <p>error</p>
 {/await}
