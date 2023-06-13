@@ -15,7 +15,7 @@
 {#await promise}
     <p>await</p>
 {:then value}
-    {ip}
+    {label}
 {:catch error}
     <p>error</p>
 {/await}
