@@ -1,7 +1,7 @@
 import { writable } from 'svelte/store'
 
 export const hashList = writable([]);
-export const allthemessages = writable([]);
+export const messageAll = writable([]);
 
 /*
 export function createMessage(hash, transcript, heraldry){
@@ -29,7 +29,7 @@ export function createMessage(hash, transcript, heraldry){
     }
 }
 */
-
+/*
 class Message{
 
     constructor(hash, transcript, heraldry) {
@@ -42,11 +42,11 @@ class Message{
         return this.hash
     }
 
-    /*
+    
     getIp(){
         return this.ip
     }
-*/
+
     //skipping label
 
     getTranscript(){
@@ -57,11 +57,11 @@ class Message{
     //skipping metadata
     //skipping time
     //skipping time server
-/*
+
     getTime(){
         return this.time
     }
-*/
+
     getHeraldry(){
         return this.heraldry
     }
@@ -72,3 +72,4 @@ class Message{
 }
 
 export const messageAll = new Message();
+*/

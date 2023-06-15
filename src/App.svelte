@@ -1,12 +1,12 @@
 <script>
-  import MessageAllPage from "./pages/MessageAllPage.svelte";
-  import AllMessagesPage from "./pages/AllMessagesPage.svelte";
-  import Filter from "./pages/Filter.svelte";
+  import APIMessagePage from "./pages/APIMessagePage.svelte";
+  import FilterMessagesPage from "./pages/FilterMessagesPage.svelte";
+  import Filter from "./pages/FilterDemo.svelte";
 </script>
 
 <main>
-  <!--<MessageAllPage />-->
-  <AllMessagesPage />
+  <!-- <APIMessagePage /> -->
+  <FilterMessagesPage />
   <!--<Filter />-->
 
 </main>

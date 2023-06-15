@@ -1,29 +1,25 @@
 <script>
+    import { onMount } from 'svelte';
     import { GetAllMessagesRoute } from '../lib/routes.js';
-    import { allthemessages } from '../lib/datamodel.js';
     import { messageAll } from '../lib/datamodel.js';
 
-    import MessageCard from '../pages/MessageCard.svelte';
-
-   let allmessages
-    let fetchDataResult
+    export let refreshTimer = 3000; //milliseconds 
     let promise = doFetch();
  
     async function doFetch (){
         const response = await fetch(GetAllMessagesRoute());
-        console.log(' r.json() >', response.clone().json())
-
-        allmessages = await response.json();
-        fetchDataResult = allmessages
-        $allthemessages = allmessages
-
+        //console.log(' r.json() >', response.clone().json())
+        $messageAll = await response.json();
     }  
-    
 
-   // $: messageAllData = messageAll.from(fetchDataResult)
-    $: console.log($allthemessages)
-    //$: console.log(allmessages)
+    onMount(() => {   
+        doFetch();
+        const interval = setInterval(doFetch, refreshTimer);
+        doFetch();
+        return () => clearInterval(interval);
+    });
 
+   
 </script>
 
 {#await promise}
@@ -36,10 +32,8 @@
 {/each}
 -->
 
-<!-- but i want to save it to the datamodel and use message card to make decisions 
-so this component just pulls all and then fills the variable -->
-
-    
+<!-- But we don't use this script for front end code, so nothing goes here
+(except for error handling) -->
 {:catch error}
     <p>error</p>
 {/await}
