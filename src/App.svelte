@@ -1,10 +1,13 @@
 <script>
+  import MessageAllPage from "./pages/MessageAllPage.svelte";
   import AllMessagesPage from "./pages/AllMessagesPage.svelte";
-  import MessageHeraldry from "./lib/MessageHeraldry.svelte";
+  import Filter from "./pages/Filter.svelte";
 </script>
 
 <main>
+  <!--<MessageAllPage />-->
   <AllMessagesPage />
-  <!--<MessageHeraldry />-->
+  <!--<Filter />-->
+
 </main>
 

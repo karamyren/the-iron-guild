@@ -4,12 +4,20 @@ import { api } from './server.js';
 
 //export let server = 'http://98.7.198.132:44000/v1';
 
+export function GetAllMessagesRoute() {
+    return `${api}/message/all`;
+}
+
 export function GetAllMessageHashesRoute() {
     return `${api}/message`;
 }
 
 export function GetMessageTranscriptRoute(messageHash) {
     return `${api}/message/${messageHash}/transcript`;
+}
+
+export function GetMessageHeraldryRoute(messageHash) {
+    return `${api}/message/${messageHash}/heraldry`;
 }
 
 export function GetMessageTimeServerHourRoute(messageHash) {

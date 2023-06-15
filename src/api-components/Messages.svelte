@@ -2,32 +2,21 @@
     import { GetAllMessageHashesRoute } from '../lib/routes.js';
     import { hashList } from '../lib/datamodel.js';
 
-    export let messageHashes = [];
     let promise = doFetch();
  
     async function doFetch (){
         const response = await fetch(GetAllMessageHashesRoute());
-        messageHashes = await response.json();  
-        $hashList = messageHashes; 
-       
+        $hashList = await response.json();  
     }  
     
     $: doFetch();
-    //$: msg = messageHashesList.from(messageHashes);
-    
-
-
 
 </script>
 
 {#await promise}
     <p>await</p>
 {:then value}
-   <!-- {messageHashes}
-   {#each messageHashes as message, i}
-        <ul> Message {message.messageHash}</ul>
-   {/each}-->
-
+<!-- don't display anything, this just gets a list of message hashes and puts it in the data model.-->
 {:catch error}
     <p>error</p>
 {/await}
