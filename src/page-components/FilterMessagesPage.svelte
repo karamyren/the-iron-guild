@@ -1,7 +1,7 @@
 <script>
     import { messageAll } from '../lib/datamodel.js'; 
-    import MessageAll from '../api-components/MessageAll.svelte.js';
-    import MessageCard from './MessageCard.svelte.js';
+    import MessageAll from '../api-components/MessageAll.svelte';
+    import MessageCard from './MessageCard.svelte';
 
     let localList
     let filteredList 
