@@ -1,5 +1,5 @@
 <script>
-    import { GetMessageAudioFileWavRoute } from './store.js';
+    import { GetMessageAudioFileWavRoute } from '../lib/routes.js';
     export let messageHash = '';
     let audio;
  

@@ -1,5 +1,5 @@
 <script>
-    import { GetMessageTimeServerHourRoute } from './store.js';
+    import { GetMessageTimeServerHourRoute } from '../lib/routes.js';
     export let messageHash = '';
     let time = '';
     let promise = GetMessageTimeServerHour(messageHash);

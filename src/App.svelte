@@ -1,10 +1,12 @@
 <script>
-  import Message from "./lib/Message.svelte";
-  import MessageHeraldry from "./lib/MessageHeraldry.svelte";
+  import APIMessagePage from "./page-components/APIMessagePage.svelte";
+  import FilterMessagesPage from "./page-components/FilterMessagesPage.svelte";
 </script>
 
 <main>
-  <Message/>
-  <!--<MessageHeraldry />-->
+  <APIMessagePage />
+  <!-- <FilterMessagesPage /> -->
+  <!--<Filter />-->
+
 </main>
 
