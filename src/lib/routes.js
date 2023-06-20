@@ -1,8 +1,4 @@
-﻿import { writable, derived, readable } from 'svelte/store';
-
-import { api } from './server.js';
-
-//export let server = 'http://98.7.198.132:44000/v1';
+﻿import { api } from './server.js';
 
 export function GetAllMessagesRoute() {
     return `${api}/message/all`;

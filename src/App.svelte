@@ -1,12 +1,11 @@
 <script>
-  import APIMessagePage from "./pages/APIMessagePage.svelte";
-  import FilterMessagesPage from "./pages/FilterMessagesPage.svelte";
-  import Filter from "./pages/FilterDemo.svelte";
+  import APIMessagePage from "./page-components/APIMessagePage.svelte";
+  import FilterMessagesPage from "./page-components/FilterMessagesPage.svelte";
 </script>
 
 <main>
-  <!-- <APIMessagePage /> -->
-  <FilterMessagesPage />
+  <APIMessagePage />
+  <!-- <FilterMessagesPage /> -->
   <!--<Filter />-->
 
 </main>

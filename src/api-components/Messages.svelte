@@ -1,15 +1,23 @@
 <script>
+    import { onMount } from 'svelte';
     import { GetAllMessageHashesRoute } from '../lib/routes.js';
     import { hashList } from '../lib/datamodel.js';
 
+    export let refreshTimer = 3000; //milliseconds 
     let promise = doFetch();
  
     async function doFetch (){
         const response = await fetch(GetAllMessageHashesRoute());
-        $hashList = await response.json();  
+        //console.log(' r.json() >', response.clone().json())
+        $hashList = await response.json();
     }  
-    
-    $: doFetch();
+
+    onMount(() => {   
+        doFetch();
+        const interval = setInterval(doFetch, refreshTimer);
+        doFetch();
+        return () => clearInterval(interval);
+    });
 
 </script>
 

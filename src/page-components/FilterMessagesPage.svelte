@@ -1,7 +1,7 @@
 <script>
     import { messageAll } from '../lib/datamodel.js'; 
-    import MessageAll from '../api-components/MessageAll.svelte';
-    import MessageCard from './MessageCard.svelte';
+    import MessageAll from '../api-components/MessageAll.svelte.js';
+    import MessageCard from './MessageCard.svelte.js';
 
     let localList
     let filteredList 
@@ -28,9 +28,6 @@
             filteredList = localList
         }
     }
-
-    //since we are an unlimited heraldry team
-    //i could just do with a message hash + heraldry route
 </script>
 
 <h2>Filter Messages</h2>
