@@ -1,6 +1,6 @@
 # The Iron Guild
 
-The Iron Guild is an single page app that displays data from the Malamute API. 
+    The Iron Guild is an single page app that displays data from the Malamute API. 
 
 ## File Structure
 
