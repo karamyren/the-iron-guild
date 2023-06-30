@@ -20,6 +20,10 @@ export function GetMessageTimeServerHourRoute(messageHash) {
     return `${api}/message/${messageHash}/time/server/hour`;
 }
 
-export function GetMessageAudioFileWavRoute(messageHash){
+export function GetMessageAudioFileWavRoute(messageHash) {
     return `${api}/message/${messageHash}/audio/file/wav`;
+}
+
+export function GetAllDevicesRoute() {
+    return `${api}/device/all`;
 }

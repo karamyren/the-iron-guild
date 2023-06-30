@@ -2,6 +2,7 @@ import { writable } from 'svelte/store'
 
 export const hashList = writable([]);
 export const messageAll = writable([]);
+export const deviceAll = writable([]);
 
 /*
 export function createMessage(hash, transcript, heraldry){
