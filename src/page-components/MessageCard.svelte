@@ -1,10 +1,4 @@
 <script>
-    import MessageDateTime from "../api-components/MessageDateTime.svelte";
-    import MessageTranscript from "../api-components/MessageTranscript.svelte";
-    import MessageHeraldry from "../api-components/MessageHeraldry.svelte";
-    import Giphy from "../api-components/Giphy.svelte";
-    import DeviceAll from "../api-components/DeviceAll.svelte";
-
     import MessageDateTime from '../api-components/MessageDateTime.svelte';
     import MessageTranscript from '../api-components/MessageTranscript.svelte';
     import MessageHeraldry from '../api-components/MessageHeraldry.svelte';
