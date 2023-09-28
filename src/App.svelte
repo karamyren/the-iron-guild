@@ -5,7 +5,7 @@
 </script>
 
 <main>
-  <!-- <APIMessagePage /> -->
-  <FilterMessagesPage />
+  <APIMessagePage />
+  <!-- <FilterMessagesPage /> -->
   <!-- <ApiDevicePage /> -->
 </main>

@@ -23,3 +23,7 @@ export function GetMessageTimeServerHourRoute(messageHash) {
 export function GetMessageAudioFileWavRoute(messageHash){
     return `${api}/message/audio/${messageHash}/wav`;
 }
+
+export function GetAllDevicesRoute() {
+    return `${api}/message`;
+}
