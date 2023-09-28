@@ -21,5 +21,5 @@ export function GetMessageTimeServerHourRoute(messageHash) {
 }
 
 export function GetMessageAudioFileWavRoute(messageHash){
-    return `${api}/message/${messageHash}/audio/file/wav`;
+    return `${api}/message/audio/${messageHash}/wav`;
 }
